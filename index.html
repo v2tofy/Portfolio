@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arosha - Founder at LankaSaaS</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Configure Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10b981',
+                        'light-gray': '#a0a0a0',
+                        'dark-bg': '#0a0a0a',
+                        'card-bg': '#111111',
+                        'border-gray': '#222222',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #a0a0a0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Custom gradient glow for character */
+        .teal-glow {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .teal-glow::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            max-height: 400px;
+            background-image: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(10, 10, 10, 0) 65%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .teal-glow img {
+            position: relative;
+            z-index: 1;
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.7; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        /* Fade-in on scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-light-gray overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-bg bg-opacity-80 backdrop-blur-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-center md:justify-end">
+            <div class="flex space-x-4">
+                <a href="#services" class="bg-border-gray text-white text-sm font-semibold rounded-full px-5 py-3 flex items-center space-x-2 hover:bg-primary-green hover:text-white transition-all duration-300 shadow-md">
+                    <!-- Play Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>See my work</span>
+                </a>
+                <a href="aroshacv.pdf" download class="bg-border-gray text-white text-sm font-semibold rounded-full px-5 py-3 hidden md:flex items-center space-x-2 hover:bg-white hover:text-dark-bg transition-all duration-300 shadow-md">
+                    <!-- Download Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Download CV</span>
+                </a>
+                <a href="#contact" class="bg-primary-green text-white text-sm font-semibold rounded-full px-5 py-3 flex items-center space-x-2 hover:bg-opacity-80 transition-all duration-300 shadow-lg">
+                    <!-- Check Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Book a service</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 pt-32 pb-16 min-h-screen flex items-center">
+            <div class="grid lg:grid-cols-3 gap-12 items-center w-full">
+                
+                <!-- Left Side -->
+                <div class="lg:col-span-1 space-y-6 fade-in" style="transition-delay: 100ms;">
+                    <h2 class="text-primary-green font-semibold uppercase tracking-wider">Helping Businesses Get Online</h2>
+                    <div class="relative">
+                        <span class="absolute -top-6 left-0 text-primary-green text-lg font-bold" style="letter-spacing: 0.25em;">LKSAAS</span>
+                        <h1 class="text-white text-8xl md:text-9xl font-bold">AROSHA</h1>
+                    </div>
+                    
+                    <!-- Tool Icons -->
+                    <div class="flex flex-wrap gap-4 pt-4 text-gray-500">
+                        <span title="Adobe Illustrator" class="flex items-center space-x-1 bg-border-gray px-3 py-1 rounded-full text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            <span>Illustrator</span>
+                        </span>
+                        <span title="Adobe Photoshop" class="flex items-center space-x-1 bg-border-gray px-3 py-1 rounded-full text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19.2.7 11.85A2 2 0 0 1 .7 9L9.3 1.1a2 2 0 0 1 2.8 0L20.8 9a2 2 0 0 1 0 2.8l-8.6 7.9a2 2 0 0 1-2.8 0Z"></path><path d="m.7 11.85 5.2-1.9a2 2 0 0 1 1.6.1L16 16.2a2 2 0 0 0 1.6.1l5.2-1.9"></path><path d="m16 16.2 5.2-1.9"></path></svg>
+                            <span>Photoshop</span>
+                        </span>
+                         <span title="Canva" class="flex items-center space-x-1 bg-border-gray px-3 py-1 rounded-full text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            <span>Canva</span>
+                        </span>
+                        <span title="AI" class="flex items-center space-x-1 bg-border-gray px-3 py-1 rounded-full text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"/></svg>
+                            <span>AI+</span>
+                        </span>
+                        <span title="VS Code" class="flex items-center space-x-1 bg-border-gray px-3 py-1 rounded-full text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <span>VS Code</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Center: 3D Character -->
+                <div class="lg:col-span-1 order-first lg:order-none fade-in">
+                    <div class="teal-glow">
+                        <img src="images\profile.png" 
+                             alt="3D Illustration of Ivan Rence" 
+                             class="w-full max-w-xs md:max-w-sm mx-auto rounded-lg">
+                    </div>
+                </div>
+                
+                <!-- Right Side -->
+                <div class="lg:col-span-1 space-y-6 fade-in" style="transition-delay: 200ms;">
+                    <p class="text-lg leading-relaxed">
+                        Hello, I'm Arosha, a web developer and automation specialist. I build custom websites and streamline workflows to help your business grow. Let's create something amazing together.
+                    </p>
+                    <a href="#contact" class="inline-block bg-primary-green text-white font-semibold rounded-full px-8 py-3 hover:bg-opacity-80 transition-all duration-300 shadow-lg">
+                        Let's Talk
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Mission Statement -->
+        <section class="py-24 bg-card-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight fade-in">
+                    Building streamlined, impactful, automated workflows, custom solutions and many more...
+                </h2>
+                <p class="max-w-2xl mx-auto mt-6 text-lg fade-in" style="transition-delay: 100ms;">
+                    My automation philosophy is centered on blending efficiency with function. I believe great automation is not just about a technical solution—it's about solving problems, eliminating bottlenecks clearly, and creating seamless workflows that resonate with your team.
+                </p>
+            </div>
+        </section>
+
+        <!-- Icon Grid -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center text-gray-600">
+                    <div class="flex flex-col items-center space-y-2 fade-in">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="text-sm">Web Development</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 fade-in" style="transition-delay: 50ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-5.5 9h11z"/><circle cx="17.5" cy="17.5" r="4.5"/><path d="M6 18H4c0-1 .5-3.4 3-4.5"/></svg>
+                        <span class="text-sm">API Integration</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 fade-in" style="transition-delay: 100ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="12" width="8" height="8" rx="2"/><path d="M8 12v-2a2 2 0 1 1 4 0v2"/></svg>
+                        <span class="text-sm">Automation</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 fade-in" style="transition-delay: 150ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                        <span class="text-sm">Cloud Services</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 fade-in" style="transition-delay: 200ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg>
+                        <span class="text-sm">Database Mgmt</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 fade-in" style="transition-delay: 250ms;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                        <span class="text-sm">SEO & Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-white text-3xl font-bold mb-2 fade-in">What I do</h3>
+                <p class="text-lg mb-10 fade-in">My main project. Click to see more.</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Service Card 1 -->
+                    <a href="#" class="bg-card-bg border border-border-gray rounded-xl p-5 flex items-center justify-between hover:border-primary-green hover:scale-[1.03] transition-all duration-300 fade-in">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/64x64/10b981/FFF?text=LOGO" alt="Brand Identity" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">BRAND IDENTITY & LOGO</h4>
+                                <span class="text-sm text-gray-500">View project</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-green"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    
+                    <!-- Service Card 2 
+                    <a href="#" class="bg-card-bg border border-border-gray rounded-xl p-5 flex items-center justify-between hover:border-primary-green hover:scale-[1.03] transition-all duration-300 fade-in" style="transition-delay: 50ms;">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/64x64/10b981/FFF?text=ADS" alt="Social Media" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">SOCIAL MEDIA ADS/DESIGN</h4>
+                                <span class="text-sm text-gray-500">View Gallery</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-green"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a> -->
+                    
+                    <!-- Service Card 3 -->
+                    <!-- <a href="#" class="bg-card-bg border border-border-gray rounded-xl p-5 flex items-center justify-between hover:border-primary-green hover:scale-[1.03] transition-all duration-300 fade-in" style="transition-delay: 100ms;">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/64x64/10b981/FFF?text=YT" alt="YouTube" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">YOUTUBE THUMBNAILS</h4>
+                                <span class="text-sm text-gray-500">View Gallery</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-green"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a> -->
+                    
+                    <!-- Service Card 4 -->
+                    <!-- <a href="#" class="bg-card-bg border border-border-gray rounded-xl p-5 flex items-center justify-between hover:border-primary-green hover:scale-[1.03] transition-all duration-300 fade-in" style="transition-delay: 150ms;">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/64x64/10b981/FFF?text=ART" alt="Album Covers" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">MOVIE POSTERS/ALBUM</h4>
+                                <span class="text-sm text-gray-500">View Gallery</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-green"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a> -->
+                    
+
+                    
+                    <!-- Service Card 6 
+                    <a href="#" class="bg-card-bg border border-border-gray rounded-xl p-5 flex items-center justify-between hover:border-primary-green hover:scale-[1.03] transition-all duration-300 fade-in" style="transition-delay: 250ms;">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/64x64/10b981/FFF?text=AI" alt="AI Prompt" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">AI PROMPT FOR DESIGN</h4>
+                                <span class="text-sm text-gray-500">View Gallery</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-green"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a> -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-card-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-white text-3xl font-bold mb-10 fade-in">Contact me</h3>
+                
+                <div class="bg-dark-bg border border-border-gray rounded-full p-4 md:p-6 inline-flex flex-wrap justify-center gap-4 md:gap-8 fade-in">
+                    
+                    <a href="#" class="flex flex-col items-center space-y-1 text-light-gray hover:text-primary-green transition-colors" title="WhatsApp">
+                        <!-- WhatsApp Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span class="text-xs">WhatsApp</span>
+                    </a>
+                    
+                    <a href="#" class="flex flex-col items-center space-y-1 text-light-gray hover:text-primary-green transition-colors" title="X / Twitter">
+                        <!-- X/Twitter Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        <span class="text-xs">X (Twitter)</span>
+                    </a>
+                    
+                    <a href="#" class="flex flex-col items-center space-y-1 text-light-gray hover:text-primary-green transition-colors" title="LinkedIn">
+                        <!-- LinkedIn Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span class="text-xs">LinkedIn</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center space-y-1 text-light-gray hover:text-primary-green transition-colors" title="GitHub">
+                        <!-- GitHub Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span class="text-xs">GitHub</span>
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 border-t border-border-gray">
+        <p class="text-sm text-gray-600">&copy; <span id="year"></span> v2Tofy. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Fade-in on scroll observer
+            const fadeElems = document.querySelectorAll('.fade-in');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElems.forEach(elem => {
+                observer.observe(elem);
+            });
+        });
+    </script>
+
+</body>
+</html>
